@@ -1,5 +1,5 @@
+background-color: paleturquoise;
 .page-header {
-    background-color: paleturquoise;
     margin-top: 0;
     padding: 20px 20px 20px 40px;
 }
@@ -38,6 +38,13 @@ body {
     background-color: mintcream;
 }
 
-.post h1 a{
+/*.post h1 a{
     color: #000001;
+}
+*/
+.post-form-blog textarea {
+    width:100%;
+}
+.post-form-blog .btn-primary {
+  float:right;
 }
