@@ -1,0 +1,43 @@
+.page-header {
+    background-color: paleturquoise;
+    margin-top: 0;
+    padding: 20px 20px 20px 40px;
+}
+
+.page-header h1, .page-header h1 a{
+    color: darkgrey;
+    font-size: 36pt;
+    text-decoration: none;
+}
+
+/*
+this will make everything like Rafeh Qazi's blogpage font and sizes
+h1, h2, h3, h4 {
+  font-family: 'Tangerine', 'Inconsolata', 'Droid Sans', serif;
+  font-size: 48px;
+}
+*/
+
+.content {
+  margin-left: 40px;
+}
+
+body h1 a {
+  color: mediumturquoise;
+}
+
+.date {
+  color: darkgoldenrod
+}
+
+.post {
+    margin-bottom: 70px;
+}
+
+body {
+    background-color: mintcream;
+}
+
+.post h1 a{
+    color: #000001;
+}

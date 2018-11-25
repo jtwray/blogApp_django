@@ -1,8 +1,10 @@
 {% extends 'blog/base.html' %}
 {% block content %}
 {% for post in posts %}
-<div>
-  <p>Published:{{ post.published_date }}</p>
+<div class="post">
+  <div class="date">
+    <p>Published:{{ post.published_date }}</p>
+  </div>
   <h1><a href="{% url 'postsDetail' pk=post.pk %}">{{ post.title }}</a></h1>
   <p>{{ post.text|linebreaksbr }}</p>
 </div>
