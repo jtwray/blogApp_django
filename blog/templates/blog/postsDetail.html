@@ -5,6 +5,7 @@
   {{ post.published_date }}
 </div>
 {% endif %}
+<a href="{% url 'postEdit' pk=post.pk %}"><i class="fas fa-edit fa-2x"></i></a>
 <h1>{{ post.title }}</h1>
 <p>{{ post.text|linebreaksbr }}</p>
 {% endblock %}
