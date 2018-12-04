@@ -5,9 +5,11 @@
       <div class= "date">
         {{ post.published_date }}
       </div>
+    {% else %}
+      <a href="{% url 'postPublish' pk=post.pk  %}" class="btn btn-primary">Publish</a>
     {% endif %}
     {% if user.is_authenticated %}
-      <a href="{% url 'postEdit' pk=post.pk %}"><i class="fas fa-edit fa-2x"></i></a>
+      <a href="{% url 'postEdit' pk=post.pk %}"><span class="fas fa-pen-square fa-2x"></span></a>
     {% endif %}
     <h1>{{ post.title }}</h1>
     <p>{{ post.text|linebreaksbr }}</p>
