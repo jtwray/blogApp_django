@@ -1,12 +1,41 @@
+.fa, .fas {
+    color: rosybrown;
+    font-weight: 900;
+    text-shadow: 2px 0px 6px #010101, 1px 1px 5px #030303;
+}
+
+.fa, .fas:active {
+    text-shadow: 1px 1px 0px rgba(255, 255, 255, 0.5), -1px -1px 1px rgba(0, 0, 0, 0.7);
+}
+
+.fas:hover {
+    color: whitesmoke;
+    font-weight: 900;
+}
+
 .page-header {
     margin-top: 0;
     padding: 20px 20px 20px 40px;
-}
+    background-color: rgb(49, 12, 180);
+ }
 
-.page-header h1, .page-header h1 a{
-    color: darkgrey;
+page-header h1, .page-header h1 a:active {
+    color: #f8f9fa;
     font-size: 36pt;
     text-decoration: none;
+    text-shadow: 1px 1px 0px rgba(255, 255, 255, 0.5), -1px -1px 1px rgba(0, 0, 0, 0.7);
+}
+
+page-header h1, .page-header h1 a:hover {
+    color: #f8f9fa;
+    font-size: 36pt;
+    text-decoration: none;
+}
+page-header h1, .page-header h1 a {
+    color: rosybrown;
+    font-size: 36pt;
+    text-decoration: none;
+    text-shadow: 2px 0px 6px #010101, 1px 1px 5px #030303;
 }
 
 /*
@@ -16,16 +45,17 @@ h1, h2, h3, h4 {
   font-size: 48px;
 }
 */
-.page-header {
-    background-color: mediumblue;
-}
 
 .content {
   margin-left: 40px;
 }
 
+body {
+    background-color: paleturquoise;
+}
+
 body h1 a {
-  color: mediumturquoise;
+  color: #e9e7e749;
 }
 
 .date {
@@ -36,13 +66,26 @@ body h1 a {
     margin-bottom: 70px;
 }
 
-*.post h1 a{
-    color: #000001;
+.post h1 a:active {
+    color: #f8f9fa;
+    text-shadow: 1px 1px 0px rgba(255, 255, 255, 0.5), -1px -1px 1px rgba(0, 0, 0, 0.7);
 }
-*/
+.post h1 a {
+    color: cornflowerblue;
+    text-shadow: 0px 1px 0px #900000;
+}
+
 .post-form-blog textarea {
     width:100%;
 }
+
 .post-form-blog .btn-primary {
-  float:right;
+  float: right;
+}
+
+.top-menu{
+    color: rgb(49, 12, 180);
+    float: right;
+    font-size: 26pt;
+    margin-right: 20px;
 }

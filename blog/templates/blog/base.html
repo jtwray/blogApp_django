@@ -12,6 +12,9 @@
 </head>
 <body>
   <div class="page-header">
+    {% if  user.is_authenticated %}
+     <a href="{% url 'postNew' %}" class="top-menu"> <span class="fas fa-plus fa-2x"></span></a>
+    {% endif %}
     <h1><a href="{% url "postsList" %}">MyBlog</a></h1>
   </div>
   <div class="content container">
@@ -24,3 +27,4 @@
   </div>
 </body>
 </html>
+
