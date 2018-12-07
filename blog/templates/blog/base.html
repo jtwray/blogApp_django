@@ -15,7 +15,11 @@
     {% if  user.is_authenticated %}
      <a href="{% url 'postDraftlist' %}" class="top-menu"> <span class="far fa-edit fa-2x"></span></a>
      <a href="{% url 'postNew' %}" class="top-menu"> <span class="fas fa-plus fa-2x"></span></a>
-    {% endif %}
+    
+    <p class="top-menu">Hello {{ user.username }} <small>(<a href="{% url 'logout' %}">Log Out</a>)</small></p>
+     {% else %}
+    <a href="{% url 'login' %}" class="top-menu"><i class="fas fa-sign-in-alt fa-2x"></i></a>
+     {% endif %}
     <h1><a href="{% url "postsList" %}">MyBlog</a></h1>
   </div>
   <div class="content container">

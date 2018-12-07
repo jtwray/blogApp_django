@@ -1,3 +1,4 @@
+from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, get_object_or_404, redirect
 from django.utils import timezone
 from .forms import PostForm
@@ -13,6 +14,7 @@ def postsDetail(request, pk):
     stuff_for_frontend = {'post': post}
     return render(request, 'blog/postsdetail.html', stuff_for_frontend)
 
+@login_required
 def postNew(request):
     if request.method == 'POST':
         form = PostForm(request.POST)
@@ -26,6 +28,7 @@ def postNew(request):
         stuff_for_frontend = {'form': form}
     return render(request, 'blog/postEdit.html', stuff_for_frontend)
 
+@login_required
 def postEdit(request, pk):
     post = get_object_or_404(Post, pk=pk)
     if request.method == 'POST':
@@ -38,14 +41,16 @@ def postEdit(request, pk):
             return redirect('postsDetail', pk=post.pk)
     else:
         form = PostForm(instance=post)
-        stuff_for_frontend = {'form': form}
+        stuff_for_frontend = {'form': form, 'post':post}
     return render(request, 'blog/postEdit.html', stuff_for_frontend)
 
+@login_required
 def postDraftlist(request):
          posts = Post.objects.filter(published_date__isnull=True).order_by('-created_date')
          stuff_for_frontend = {'posts': posts}
          return render(request, 'blog/postDraftlist.html', stuff_for_frontend)   
-         
+
+@login_required        
 def postPublish(request, pk):
     post = get_object_or_404(Post, pk=pk)
     post.publish()

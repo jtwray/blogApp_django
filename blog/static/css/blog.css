@@ -8,9 +8,24 @@ body{
     color: whitesmoke;
     font-weight:500;
 }
+.loginh2 {
+    color: gainsboro;
+    font-weight: 900;
+    text-shadow: 2px 0px 6px #010101, 1px 1px 5px #030303;
+
+}
+
+.loginh2:active{
+    text-shadow: 1px 1px 0px rgba(255, 255, 255, 0.5), -1px -1px 1px rgba(0, 0, 0, 0.7);
+}
+
+.loginh2:hover{
+    color: whitesmoke;
+    font-weight: 900;
+}
 
 .fa, .fas, .far {
-    color: rosybrown;
+    color: gainsboro;
     font-weight: 900;
     text-shadow: 2px 0px 6px #010101, 1px 1px 5px #030303;
 }
@@ -27,23 +42,23 @@ body{
 .page-header {
     margin-top: 0;
     padding: 20px 20px 20px 40px;
-    background-color: rgb(49, 12, 180);
+    background-color: cornflowerblue;
  }
 
-page-header h1, .page-header h1 a:active {
+.page-header h1, .page-header h1 a:active {
     color: #f8f9fa;
     font-size: 36pt;
     text-decoration: none;
     text-shadow: 1px 1px 0px rgba(255, 255, 255, 0.5), -1px -1px 1px rgba(0, 0, 0, 0.7);
 }
 
-page-header h1, .page-header h1 a:hover {
+.page-header h1, .page-header h1 a:hover {
     color: #f8f9fa;
     font-size: 36pt;
     text-decoration: none;
 }
-page-header h1, .page-header h1 a {
-    color: rosybrown;
+.page-header h1, .page-header h1 a {
+    color: gainsboro;
     font-size: 36pt;
     text-decoration: none;
     text-shadow: 2px 0px 6px #010101, 1px 1px 5px #030303;
@@ -70,7 +85,7 @@ body h1 a {
 }
 
 .date {
-  color: darkgoldenrod
+  color: darkmagenta
 }
 
 .post {
@@ -95,8 +110,10 @@ body h1 a {
 }
 
 .top-menu{
-    color: rgb(49, 12, 180);
+    color: gainsboro;
     float: right;
     font-size: 26pt;
     margin-right: 20px;
+    text-shadow: 1px 1px 0px rgba(255, 255, 255, 0.5), -1px -1px 1px rgba(0, 0, 0, 0.7);
+    text-shadow: 2px 0px 6px #010101, 1px 1px 5px #030303;
 }

@@ -20,4 +20,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     #127.0.0.1:8000
     path('', include('blog.urls')),
+    path('account/', include('django.contrib.auth.urls')),
+    #path(r'^accounts/login/$', auth_views.LoginView),
+    #path(r'^accounts/logout/$', view=auth_views.LogoutView, name='logout', kwargs={'nextPage'='/'}),
 ]
