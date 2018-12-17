@@ -1,0 +1,25 @@
+Content-Type: text/plain; charset="utf-8"
+MIME-Version: 1.0
+Content-Transfer-Encoding: 7bit
+Subject: Password reset on localhost:8000
+From: webmaster@localhost
+To: tuckerwray84@gmail.com
+Date: Sat, 08 Dec 2018 02:35:59 -0000
+Message-ID: <154423655936.6244.11969747369329620650@DESKTOP-43ONNSG>
+
+
+You're receiving this email because you requested a password reset for your user account at localhost:8000.
+
+Please go to the following page and choose a new password:
+
+http://localhost:8000/accounts/reset/MQ/51x-88d27a2c7f7ce7455c7a/
+
+Your username, in case you've forgotten: jtwray
+
+Thanks for using our site!
+
+The localhost:8000 team
+
+
+
+-------------------------------------------------------------------------------

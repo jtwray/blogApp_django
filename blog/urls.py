@@ -1,6 +1,7 @@
 from django.urls import path,include
 from . import views
 from django.contrib.auth import views as auth_views
+from django.contrib import admin
 
 urlpatterns = [
     # 127.0.0.1:8000 --> local
@@ -24,6 +25,9 @@ urlpatterns = [
     # 127.0.0.1:8000/accounts/login --> local
     # mydjangosite.com/accounts/login--> online
     path('accounts/', include('django.contrib.auth.urls')),
+    # 127.0.0.1:8000/post/1/comment --> local
+    # mydjangosite.com/post/1/comment--> online
+    path('post/<int:pk>/comment/', views.add_comment_to_post, name='add_comment_to_post'),
     #path(r'^accounts/login/$', auth_views.LoginView),
     # path(r'^accounts/login/$', auth_views.LoginView.as_view(template_name='registration/login.html')),
     #path)
@@ -33,5 +37,5 @@ urlpatterns = [
 ]
 
 
-#login(request, template_name=`registration/login.html`, redirect_field_name='next', authentication_form=AuthenticationForm, current_app=None, extra_context=None, redirect_authenticated_user=False
+#login( request, template_name=`registration/login.html`, redirect_field_name='next', authentication_form=AuthenticationForm, current_app=None, extra_context=None, redirect_authenticated_user=False
 

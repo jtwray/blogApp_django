@@ -27,17 +27,23 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
-LOGIN_REDIRECT_URL  = '/'
+LOGIN_REDIRECT_URL  = 'home'
+LOGOUT_REDIRECT_URL  = 'home'
+EMAIL_BACKEND = "django.core.mail.backends.filebased.EmailBackend"
+EMAIL_FILE_PATH = os.path.join(BASE_DIR, "sent_emails")   
 # Application definition
 
-INSTALLED_APPS = [
+INSTALLED_APPS =  [
+    'blog',
+    'django_comments',
+    'django.contrib.sites',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'blog',
+     
 ]
 
 MIDDLEWARE = [
@@ -65,8 +71,7 @@ TEMPLATES = [
                 'django.contrib.messages.context_processors.messages',
             ],
         },
-    },
-]
+    },]
 
 WSGI_APPLICATION = 'blogApp.wsgi.application'
 
@@ -119,3 +124,5 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
 
 STATIC_URL = '/static/'
+
+SITE_ID = 1
