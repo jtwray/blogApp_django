@@ -1,0 +1,7 @@
+{
+  "name": "blogApp_django",
+  "description": "python django blogApp",
+  "repository": "https://github.com/heroku/blogApp_django",
+  "logo": "https://blogApp_django.herokuapp.com/django.png",
+  "keywords": ["django","blog","python","tuckerwray"]
+}
