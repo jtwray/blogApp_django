@@ -1,0 +1,83 @@
+[33mcommit 72973d599f8773c0aabcd751acbcaa19a2363967[m[33m ([m[1;36mHEAD -> [m[1;32mstep5AddComments[m[33m, [m[1;31morigin/step5AddComments[m[33m)[m
+Author: Tucker Wray <tuckerwray84@gmail.com>
+Date:   Mon Dec 17 15:06:01 2018 -0500
+
+    Add comment ability
+
+[33mcommit 6bd3bbf673603b653d2f35c2eed758bc57a3c255[m[33m ([m[1;31morigin/step4Login[m[33m, [m[1;32mstep4Login[m[33m)[m
+Author: Tucker Wray <tuckerwray84@gmail.com>
+Date:   Fri Dec 7 16:23:20 2018 -0500
+
+    Add Logout Funcionality
+
+[33mcommit f053e2e956513a3aef65dc3aeb4034bba76d1631[m[33m ([m[1;31morigin/step3CreatePosts[m[33m, [m[1;32mstep3CreatePosts[m[33m)[m
+Author: Tucker Wray <tuckerwray84@gmail.com>
+Date:   Tue Dec 4 15:35:57 2018 -0500
+
+    Add feature to make drafts and publish them.
+
+[33mcommit c8d00c69abbd6daeab196acb5a73821ee131c593[m
+Author: Tucker Wray <tuckerwray84@gmail.com>
+Date:   Tue Dec 4 09:39:58 2018 -0500
+
+    Add basic authentication and icon to make new posts.
+
+[33mcommit 82249673ef6b5dac5719760b9d7d6ef1cbd2f8d0[m
+Author: Tucker Wray <tuckerwray84@gmail.com>
+Date:   Sun Nov 25 23:11:51 2018 -0500
+
+    Added funtionality to Edit from front end.
+
+[33mcommit 7ffd02a05820f3c283735419c50222091fdf3d1e[m
+Author: Tucker Wray <tuckerwray84@gmail.com>
+Date:   Sun Nov 25 15:06:00 2018 -0500
+
+    Add feature to create new blog posts from frontend
+
+[33mcommit 757b2d94a0423dad066ab6f5d05677cb3525c42a[m
+Author: Tucker Wray <tuckerwray84@gmail.com>
+Date:   Sat Nov 24 23:53:28 2018 -0500
+
+    Added Css. D.ontR.epeatY.ourself base.html blocks
+
+[33mcommit c4abd7592550bd0d97dafd083d1106982ec1703d[m
+Author: Tucker Wray <tuckerwray84@gmail.com>
+Date:   Fri Nov 23 23:22:52 2018 -0500
+
+    Bootstrap/DRY principle in Django with extensions[ implemented block coding ==>base.html ]
+
+[33mcommit 15661517bcc057a6e5d684b61b0463b52f4f0b39[m
+Author: Tucker Wray <tuckerwray84@gmail.com>
+Date:   Fri Nov 23 20:52:20 2018 -0500
+
+    Add detail view for each blog post.
+
+[33mcommit b26c3ca227a0b994d6e9a225024e3fca13fbd868[m
+Author: Tucker Wray <tuckerwray84@gmail.com>
+Date:   Fri Nov 23 20:47:12 2018 -0500
+
+    Add detail view for each blog post.
+
+[33mcommit 7f673f24325ff5bb7f34b65c90134ba7df04fa1e[m
+Author: Tucker Wray <tuckerwray84@gmail.com>
+Date:   Fri Nov 23 15:48:12 2018 -0500
+
+     Show all blog posts on the homepage
+
+[33mcommit 53c01f700ca41544431a5fa49296338c4daf557b[m[33m ([m[1;31morigin/step2PostAdmin[m[33m, [m[1;31morigin/master[m[33m, [m[1;32mstep2PostAdmin[m[33m, [m[1;32mmaster[m[33m)[m
+Author: Tucker Wray <tuckerwray84@gmail.com>
+Date:   Tue Nov 20 18:38:17 2018 -0500
+
+    Add ability to make posts from the Administrator Interface.
+
+[33mcommit af6f2016eba822d808b561da84f4fc4fcb540bc2[m[33m ([m[1;31morigin/step1MealPrep[m[33m, [m[1;32mstep1MealPrep[m[33m)[m
+Author: Tucker Wray <tuckerwray84@gmail.com>
+Date:   Tue Nov 20 17:24:59 2018 -0500
+
+    .gitignore file added to Root. ignore *.pyc
+
+[33mcommit 56f4dcefbb92adb91ac4a0ec35758b3e23e834b5[m
+Author: Tucker Wray <tuckerwray84@gmail.com>
+Date:   Tue Nov 20 12:01:58 2018 -0500
+
+    Initial commit. Setting up the project for Success.

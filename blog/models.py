@@ -17,11 +17,12 @@ class Post(models.Model):
         return str(self.title) + ' by ' + str(self.author)
 
 class Comment(models.Model):
-    post = models.ForeignKey('blog.Post', on_delete=models.CASCADE, related_name='comment')
+    post = models.ForeignKey('blog.Post', on_delete=models.CASCADE, related_name='comments')
     author = models.CharField(max_length=200)
-    text = models.TextField()
+    text= models.TextField()
     created_date = models.DateTimeField(default=timezone.now)
-
     def __str__(self):
-        return self.text 
+        return self.text
+
+
 

@@ -3,7 +3,7 @@ from django.shortcuts import get_object_or_404, redirect, render
 from django.utils import timezone
 
 from .forms import PostForm, CommentForm
-from .models import Post, Comment
+from .models import Post
 
 
 # Create your views here.

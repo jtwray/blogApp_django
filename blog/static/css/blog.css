@@ -86,8 +86,7 @@ footer,.page-content::after{
 body{
     background: url(https://i.pinimg.com/236x/39/a7/91/39a791a4c82a46272b51cd19e3cfd471--paisley-pattern-lace-patterns.jpg) ;
     background: url(https://cdn.shopify.com/s/files/1/0879/0542/products/pc1478_da4bcba9-c02d-40bd-88c6-8b32119d8933_1024x1024.jpg?v=1513990783);
-    background-color: lightgoldenrodyellow;
-    background-repeat: no-repeat;
+    background-repeat: unset;
     background-size: contain;
     background-size: cover;
     color: whitesmoke;
@@ -98,7 +97,7 @@ body h1 a {
   color: #e9e7e749;
 }
 
-.date {
+.date, .body_comment  {
   color: darkmagenta
 }
 
@@ -123,6 +122,16 @@ body h1 a {
   float: right;
 }
 
+.btn-secondary {
+    color: #30f15c;
+    background-color: #193a70;
+    border-color: #7099e0;
+    text-shadow: 1px 1px 0px rgba(255, 255, 255, 0.5), -1px -1px 1px rgba(0, 0, 0, 0.7);
+}
+
+.btn-secondary:hover{
+    color: #7099e0
+}
 .comment {
     margin: 20px 0px 20px 20px;
 }
@@ -130,7 +139,7 @@ body h1 a {
 footer
 {
     margin: 0;
-    padding: 0;
+    padding: 35px;
     font-family: sans-serif;
 }
 
@@ -142,7 +151,7 @@ transform: translate(-50%,-50%);
 margin: 0;
 padding: 0;
 display: flex;
-width: 320px;
+width: 520px;
 height: 60px;
 }
 

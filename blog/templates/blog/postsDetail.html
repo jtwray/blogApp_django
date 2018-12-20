@@ -14,30 +14,17 @@
       <h1>{{ post.title }}</h1>
       <p>{{ post.text|linebreaksbr }}</p>
   </div>
+  <div>
+    <a href="{%  url 'add_comment_to_post' pk=post.pk %}" class="btn btn-secondary" style="float: right"><strong>[+]comment</strong></a>
+  </div>  
   <hr>
-  {% load comments %}
-  {% render_comment_list for post %}
-  <a href="{%  url 'add_comment_to_post' pk=post.pk %}" class="btn btn-secondary">[+]comment</a>
   {% for comment in post.comments.all %}
-
-  {% get_comment_list for blog.post object_pk as comment_list %}
-{% for comment in comment_list %}
-<p>Posted by: {{ comment.user_name }} on {{ comment.submit_date }}</p>
-...
-<p>Comment: {{ comment.comment }}</p>
-...
-{% endfor %}
-    <div class= "comment">
-      <div class ="date">
-        {{ comment.created_date }}
-      </div>  
-      <strong>{{ comment.author }}</strong>
-      <p>{{ comment.text }}</p>
-    </div>
-  {% empty %}
-    <p>No comments Yet</p>
-
-  {% endfor %}
-    
+    <p class="body_comment">on {{ comment.created_date }} <strong> {{ comment.author }} </strong>said:</p>
+    <p>{{ comment.text }}</p>
+    {% endfor %}
+    <div>
+        <a href="{%  url 'add_comment_to_post' pk=post.pk %}" class="btn btn-secondary" style="float: right"><strong>[+]comment</strong></a>
+      </div> 
 {% endblock %}
 
+ 
