@@ -28,6 +28,9 @@ urlpatterns = [
     # 127.0.0.1:8000/post/1/comment --> local
     # mydjangosite.com/post/1/comment--> online
     path('post/<int:pk>/comment/', views.add_comment_to_post, name='add_comment_to_post'),
+    # 127.0.0.1:8000/comment/1/remove --> local
+    # mydjangosite.com/comment/1/remove--> online
+    path('comment/<int:pk>/remove/', views.comment_remove, name='commentRemove'),
     #path(r'^accounts/login/$', auth_views.LoginView),
     # path(r'^accounts/login/$', auth_views.LoginView.as_view(template_name='registration/login.html')),
     #path)
