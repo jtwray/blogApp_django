@@ -1,0 +1,153 @@
+footer
+{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+footer ul
+{
+position: absolute;
+top: 50%;
+left:50%;
+transform: translate(-50%,-50%);
+margin: 0;
+padding: 0;
+display: flex;
+width: 640px;
+height: 60px;
+}
+
+footer ul:before
+{
+content: '\f1e0';
+font-family: fontAwesome;
+position: absolute;
+width: 100%;
+height: 100%;
+background: linear-gradient(45deg, #ff00ff, #000);
+border-radius: 30px;
+text-align: center;
+line-height: 60px;
+color: #fff;
+font-size: 30px;
+margin: 0 2px;
+transition: 0.5s;
+z-index: 1;
+}
+footer ul:hover::before
+{
+    width: 60px;
+}
+footer ul li
+{
+    position: absolute;
+    list-style: none;
+    transition: 1s;
+}
+
+footer ul li a
+{
+    display: block;
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    background: #262626;
+    color: #fff;
+    margin: 0 2px;
+    border-radius: 50%;
+    font-size: 30px;
+}
+
+footer ul li:nth-child(1) a
+{
+    background: #6e5494
+}
+footer ul li:nth-child(2) a
+{
+    background: #3b5999
+}
+footer ul li:nth-child(3) a
+{
+    background: #1769ff
+}
+footer ul li:nth-child(4) a
+{
+    background: #0077B5
+}
+footer ul li:nth-child(5) a
+{
+    background: #55acee
+}
+
+footer ul li:nth-child(6) a
+{
+    background: #25d366
+}
+footer ul li:nth-child(7) a
+{
+    background: #ff8833
+}
+footer ul li:nth-child(8) a
+{
+    background: #e4405f
+}
+footer ul li:nth-child(9) a
+{
+    background: #bd081c
+}
+footer ul li:nth-child(10) a
+{
+    background: #35465c
+}
+footer ul:hover li:nth-child(1) a
+{
+    transform: translateX(64px) rotate(720deg);
+    transition: 1.1s;
+}
+footer ul:hover li:nth-child(2) a
+{
+    transform: translateX(128px) rotate(720deg);
+    transition: 1.2s;
+}
+footer ul:hover li:nth-child(3) a
+{
+    transform: translateX(192px) rotate(720deg);
+    transition: 1.3s;
+}
+footer ul:hover li:nth-child(4) a
+{
+    transform: translateX(256px) rotate(720deg);
+    transition: 1.4s;
+}
+footer ul:hover li:nth-child(5) a
+{
+    transform: translateX(320px) rotate(720deg);
+    transition: 1.5s;
+}
+footer ul:hover li:nth-child(6) a
+{
+    transform: translateX(384px) rotate(720deg);
+    transition: 1.6s;
+}
+footer ul:hover li:nth-child(7) a
+{
+    transform: translateX(448px) rotate(720deg);
+    transition: 1.7s;
+}
+footer ul:hover li:nth-child(8) a
+{
+    transform: translateX(512px) rotate(720deg);
+    transition: 1.8s;
+}
+footer ul:hover li:nth-child(9) a
+{
+    transform: translateX(576px) rotate(720deg);
+    transition: 1.9s;
+}
+footer ul:hover li:nth-child(10) a
+{
+    transform: translateX(640px) rotate(720deg);
+    transition: 2.1s;
+}

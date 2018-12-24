@@ -21,10 +21,12 @@
   {% for comment in post.comments.all %}
     <p class="body_comment">on {{ comment.created_date }} <strong> {{ comment.author }} </strong>said:</p>
     <p>{{ comment.text }}</p>
-    {% endfor %}
     <div>
-        <a href="{%  url 'add_comment_to_post' pk=post.pk %}" class="btn btn-secondary" style="float: right"><strong>[+]comment</strong></a>
-      </div> 
-{% endblock %}
+      <a href="{%  url 'add_comment_to_post' pk=post.pk %}" class="btn btn-secondary" style="float: right"><strong>[+]comment</strong></a>
+    </div> 
+  {% empty %}
+    <P>no comments here yet :(</P>
+  {% endfor %}
+  {% endblock %}
 
  
