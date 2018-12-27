@@ -11,6 +11,7 @@
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
 </head>	
 <body>
+  <div class="page-content">
   <div class="page-header">
     {% if  user.is_authenticated %}
      <a href="{% url 'postDraftlist' %}" class="top-menu"> <span class="far fa-edit fa-2x"></span></a>
@@ -22,6 +23,7 @@
      {% endif %}
     <h1><a href="{% url "postsList" %}">MyBlog</a></h1>
   </div>
+  <main>
   <div class="content container">
     <div class="row">
       <div class="col-md-8">
@@ -30,6 +32,30 @@
       </div>
     </div>
   </div>
+</div>
+</main>
+  <footer>
+      
+        <ul>
+            <li><a href="https://www.github.com/jtwray"><i class="fab fa-github" aria-hidden="true"></i></a></li>
+            <li><a href="https://twitter.com/tuckerwray"><i class="fab fa-twitter" aria-hidden="true"></i></a></li>
+            <li><a href="https://www.linkedin.com/in/tucker-wray-223a8860/"><i class="fab fa-linkedin" aria-hidden="true"></i></a></li>
+            <li><a href="https://www.facebook.com/tucker.wray.1"><i class="fab fa-facebook-f" aria-hidden="true"></i></a></li>
+            <li><a href="https://www.instagram.com/donniewrayferton/"><i class="fab fa-instagram" aria-hidden="true"></i></a></li> 
+            <li><a href="mailto: tuckerwray84@gmail.com"><i class="fab fa-mailchimp" aria-hidden="true"></i></a></li>
+            <li><a href="tel:12767343811"><i class="fa fa-phone" aria-hidden="true"></i></a></li>
+            <li><a href="https://m.me/tucker.wray.1"><i class="fab fa-facebook-messenger" aria-hidden="true"></i></a></li>
+        </ul>
+        {% if  user.is_authenticated %}
+          <a href="{% url 'postDraftlist' %}" class="top-menu"> <span class="far fa-edit fa-2x"></span></a>
+          <a href="{% url 'postNew' %}" class="top-menu"> <span class="fas fa-plus fa-2x"></span></a>
+        
+        <p class="top-menu">Hello {{ user.username }} <small>(<a href="{% url 'logout' %}">Log Out</a>)</small></p>
+          {% else %}
+        <a href="{% url 'login' %}" class="top-menu"><i class="fas fa-sign-in-alt fa-2x"></i></a>
+          {% endif %}
+        <h1><a href="{% url 'postsList' %}">MyBlog</a></h1>
+      
+  </footer>
 </body>
 </html>
-

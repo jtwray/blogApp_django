@@ -1,17 +1,33 @@
 {% extends 'blog/base.html' %}
 {% block content %}
   <div class="post">
-    {% if post.published_date %}
-      <div class= "date">
-        {{ post.published_date }}
-      </div>
-    {% else %}
-      <a href="{% url 'postPublish' pk=post.pk  %}" class="btn btn-primary">Publish</a>
-    {% endif %}
-    {% if user.is_authenticated %}
-      <a href="{% url 'postEdit' pk=post.pk %}"><span class="fas fa-pen-square fa-2x"></span></a>
-    {% endif %}
-    <h1>{{ post.title }}</h1>
-    <p>{{ post.text|linebreaksbr }}</p>
-</div>
-{% endblock %}
+      {% if post.published_date %}
+        <div class= "date">
+          {{ post.published_date }}
+        </div>
+      {% else %}
+        <a href="{% url 'postPublish' pk=post.pk  %}" class="btn btn-primary">Publish</a>
+      {% endif %}
+      {% if user.is_authenticated %}
+        <a href="{% url 'postEdit' pk=post.pk %}"><span class="fas fa-pen-square fa-2x"></span></a>
+      {% endif %}
+      <h1>{{ post.title }}</h1>
+      <p>{{ post.text|linebreaksbr }}</p>
+  </div>
+  <div>
+    <a href="{%  url 'add_comment_to_post' pk=post.pk %}" class="btn btn-secondary" style="float: right"><strong>[+]comment</strong></a>
+  </div>  
+  <hr>
+  {% for comment in post.comments.all %}
+    <a href="{% url 'commentRemove' pk=post.pk %}" class="btn btn-danger"><strong>[-]delete[-] comment</strong></a>
+    <p class="body_comment">on {{ comment.created_date }} <strong> {{ comment.author }} </strong>said:</p>
+    <p>{{ comment.text }}</p>
+    <div>
+      <a href="{%  url 'add_comment_to_post' pk=post.pk %}" class="btn btn-secondary" style="float: right"><strong>[+]comment</strong></a>
+    </div> 
+  {% empty %}
+    <P>no comments here yet :(</P>
+  {% endfor %}
+  {% endblock %}
+
+ 

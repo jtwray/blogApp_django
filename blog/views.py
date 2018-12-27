@@ -1,8 +1,11 @@
 from django.contrib.auth.decorators import login_required
-from django.shortcuts import render, get_object_or_404, redirect
+from django.shortcuts import get_object_or_404, redirect, render
 from django.utils import timezone
-from .forms import PostForm
-from .models import Post
+
+from .forms import PostForm, CommentForm
+from .models import Post, Comment
+
+
 # Create your views here.
 def postsList(request):
     posts = Post.objects.filter(published_date__lte=timezone.now()).order_by('-published_date')
@@ -12,7 +15,7 @@ def postsList(request):
 def postsDetail(request, pk):
     post = get_object_or_404(Post, pk=pk)
     stuff_for_frontend = {'post': post}
-    return render(request, 'blog/postsdetail.html', stuff_for_frontend)
+    return render(request, 'blog/postsDetail.html', stuff_for_frontend)
 
 @login_required
 def postNew(request):
@@ -55,3 +58,19 @@ def postPublish(request, pk):
     post = get_object_or_404(Post, pk=pk)
     post.publish()
     return redirect('postsDetail', pk=pk)
+
+@login_required
+def add_comment_to_post(request, pk):
+    post = get_object_or_404(Post, pk=pk)
+    if request.method == 'POST':
+        form = CommentForm(request.POST) 
+        comment.save()
+        return redirect('postsDetail', pk=post.pk)
+    else:
+        form = CommentForm()
+    return render(request, 'blog/add_comment_to_post.html', {'form':form})
+
+def comment_remove(request, pk):
+    comment = get_object_or_404(comment, pk=pk)
+    comment.delete()
+    return redirect('postsDetail', pk=comment.post.pk)
