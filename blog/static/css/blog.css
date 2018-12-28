@@ -1,5 +1,10 @@
+.page-header,body {
+    font-family: 'Open Sans', sans-serif;
+}
+h1{
+    font-family: 'Oswald', sans-serif;
+}
 body{
-    background: url(https://i.pinimg.com/236x/39/a7/91/39a791a4c82a46272b51cd19e3cfd471--paisley-pattern-lace-patterns.jpg) ;
     background: url(https://cdn.shopify.com/s/files/1/0879/0542/products/pc1478_da4bcba9-c02d-40bd-88c6-8b32119d8933_1024x1024.jpg?v=1513990783);
     background-color: lightgoldenrodyellow;
     background-repeat: no-repeat;
@@ -117,3 +122,112 @@ body h1 a {
     text-shadow: 1px 1px 0px rgba(255, 255, 255, 0.5), -1px -1px 1px rgba(0, 0, 0, 0.7);
     text-shadow: 2px 0px 6px #010101, 1px 1px 5px #030303;
 }
+
+
+ul{
+  position:sticky;
+  bottom:10px;
+  left:50%;
+  transform: translate(-50%,-50%);
+  margin: 0;
+  padding: 0;
+  display: flex;
+  width: 320px;
+  height: 60px;
+}
+ul:before{
+  content: '\f1e0';
+  font-family: Font Awesome\ 5 Free;   /*share icon <jacks>*/
+  font-weight: 900;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, #ff00ff, #8a2be2);
+  border-radius: 30px;
+  text-align: center;
+  line-height: 60px;
+  color: #fff;
+  font-size: 30px;
+  margin: 0 2px;
+  transition: 0.5s;
+  z-index: 1;
+}
+ul:hover:before{
+  width:60px;
+}
+ul li{
+  position: absolute;
+  list-style: none;
+  transition: 1s;
+}
+
+ul li a{
+  display: block;
+  width: 60px;
+  height: 60px;
+  line-height: 60px;
+  text-align: center;
+  background: #262626;
+  color: #fff;
+  margin: 0 2px;
+  border-radius: 50%;
+  font-size: 30px;
+  transition: 1s;
+}
+
+ul li:nth-child(1) a  /*google:'social media color'*/
+{
+  background: #3b5999;
+}
+
+ul li:nth-child(2) a  
+{
+  background: #55acee;
+}
+
+ul li:nth-child(3) a  
+{
+  background: #dd4b39;
+}
+
+ul li:nth-child(4) a  
+{
+  background: #0077b5;
+}
+
+ul li:nth-child(5) a  
+{
+  background: #e4405f;
+}
+
+ul:hover li:nth-child(1) a  
+{
+  transform: translateX(64px) rotate(360);
+  transition-delay: 0.8s;	
+}
+
+ul:hover li:nth-child(2) a  
+{
+  transform: translateX(128px) rotate(360);
+  transition-delay: 0.6s;
+}
+
+ul:hover li:nth-child(3) a  
+{
+  transform: translateX(192px) rotate(360);
+  transition-delay: 0.4s;
+}
+
+ul:hover li:nth-child(4) a  
+{
+  transform: translateX(256px) rotate(360);
+  transition-delay: 0.2s;
+}
+
+ul:hover li:nth-child(5) a  
+{
+  transform: translateX(320px) rotate(360);
+  transition-delay: 0s;
+}
+
+

@@ -14,20 +14,25 @@
       <h1>{{ post.title }}</h1>
       <p>{{ post.text|linebreaksbr }}</p>
   </div>
-  <div>
-    <a href="{%  url 'add_comment_to_post' pk=post.pk %}" class="btn btn-secondary" style="float: right"><strong>[+]comment</strong></a>
-  </div>  
-  <hr>
-  {% for comment in post.comments.all %}
-    <a href="{% url 'commentRemove' pk=post.pk %}" class="btn btn-danger"><strong>[-]delete[-] comment</strong></a>
-    <p class="body_comment">on {{ comment.created_date }} <strong> {{ comment.author }} </strong>said:</p>
-    <p>{{ comment.text }}</p>
-    <div>
-      <a href="{%  url 'add_comment_to_post' pk=post.pk %}" class="btn btn-secondary" style="float: right"><strong>[+]comment</strong></a>
-    </div> 
-  {% empty %}
-    <P>no comments here yet :(</P>
-  {% endfor %}
-  {% endblock %}
-
+    <hr>
+    <a href="{%  url 'add_comment_to_post' pk=post.pk %}" class="btn btn-secondary"><strong>[+]comment</strong></a>
+{% for comment in post.comments.all %}
+        {% if user.is_authenticated or comment.approved %}
+            <div class="comment">
+                <div class="date">
+                    {{ comment.created_date }}
+                </div>
+                {% if not comment.approved and user.is_superuser %}
+                  <a href="{% url 'comment_approve' pk=comment.pk %}"><i class="fas fa-check"></i></a>
+                <a href="{% url 'comment_remove' pk=comment.pk %}" class="fas fa-trash-alt"></a>
+                 {% endif %}
+                <strong>{{ comment.author }} </strong>
+                <p>said:</p>
+                <p>{{ comment.text }}</p>
+            </div>
+        {% endif %}
+{% empty %}
+      <p>nO cOmmEnts yEt...</p>
+{% endfor %}
+{% endblock %}
  
