@@ -145,23 +145,22 @@ width: 640px;
 height: 60px;
 }
 
-ul:before
-{
-content: '\f1e0';
-font-family: fontAwesome5/free;
-font-weight: 900;
-position: absolute;
-width: 100%;
-height: 100%;
-background: linear-gradient(45deg, #ff00ff, #000);
-border-radius: 30px;
-text-align: center;
-line-height: 60px;
-color: #fff;
-font-size: 30px;
-margin: 0 2px;
-transition: 0.5s;
-z-index: 1;
+ul:before {
+    content: '\f1e0';
+    font-family: Font Awesome\ 5 Free;
+    font-weight: 900;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, #ff00ff, #000);
+    border-radius: 30px;
+    text-align: center;
+    line-height: 60px;
+    color: #fff;
+    font-size: 30px;
+    margin: 0 2px;
+    transition: 0.5s;
+    z-index: 1;
 }
 ul:hover::before
 {
