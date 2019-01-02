@@ -1,4 +1,5 @@
 {% load staticfiles %}
+{% load markdownify %}
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 <head>
@@ -9,7 +10,9 @@
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans|Oswald" rel="stylesheet">
   <link rel="stylesheet" href="{% static '\css\blog.css' %}">
- </head>	
+  <link rel="shortcut icon"  href="{% static 'images/favicon.ico' %}"/>
+  <link rel="stylesheet" href="{% static 'css/zenburn.css' %}">
+</head>	
 <body>
   <div class="page-content">
   <div class="page-header">

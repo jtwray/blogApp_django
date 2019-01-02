@@ -135,7 +135,7 @@ footer
 ul
 {
 position: absolute;
-top: 50%;
+top: 95%;
 left:50%;
 transform: translate(-50%,-50%);
 margin: 0;
@@ -152,13 +152,13 @@ ul:before {
     position: absolute;
     width: 100%;
     height: 100%;
-    background: linear-gradient(45deg, #ff00ff, #000);
+    background: url(https://cdn.shopify.com/s/files/1/0879/0542/products/pc1478_da4bcba9-c02d-40bd-88c6-8b32119d8933_1024x1024.jpg?v=1513990783);
     border-radius: 30px;
     text-align: center;
     line-height: 60px;
     color: #fff;
     font-size: 30px;
-    margin: 0 2px;
+    margin: 0.2px;
     transition: 0.5s;
     z-index: 1;
 }
@@ -182,7 +182,7 @@ ul li a
     text-align: center;
     background: #262626;
     color: #fff;
-    margin: 0 2px;
+    margin: 0.2px;
     border-radius: 50%;
     font-size: 30px;
 }
