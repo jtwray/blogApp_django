@@ -16,6 +16,9 @@ urlpatterns = [
     # 127.0.0.1:8000/post/1/edit --> local
     # mydjangosite.com/post/1/edit--> online
     path('post/<int:pk>/edit/', views.postEdit, name='postEdit'),
+    # 127.0.0.1:8000/post/1/delete --> local
+    # mydjangosite.com/post/1/delete--> online
+    path('post/<int:pk>/delete/', views.postDelete, name='postDelete'),
     # 127.0.0.1:8000/drafts --> local
     # mydjangosite.com/drafts--> online
     path('drafts/', views.postDraftlist, name='postDraftlist'),
@@ -31,8 +34,9 @@ urlpatterns = [
     # 127.0.0.1:8000/comment/1/remove --> local
     # mydjangosite.com/comment/1/remove--> online
     path('comment/<int:pk>/remove/', views.comment_remove, name='comment_remove'),
+    # 127.0.0.1:8000/comment/1/approve --> local
+    # mydjangosite.com/comment/1/approve--> online
     path('comment/<int:pk>/approve/', views.comment_approve, name='comment_approve')
-    #path(r'^accounts/login/$', auth_views.LoginView),
     # path(r'^accounts/login/$', auth_views.LoginView.as_view(template_name='registration/login.html')),
     #path)
     #url('^change-password/$', auth_views.PasswordChangeView.as_view()),

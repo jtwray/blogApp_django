@@ -9,14 +9,15 @@
       {% else %}
         <a href="{% url 'postPublish' pk=post.pk  %}" class="btn btn-primary">Publish</a>
       {% endif %}
-      {% if user.is_authenticated %}
-        <a href="{% url 'postEdit' pk=post.pk %}"><span class="fas fa-pen-square fa-2x"></span></a>
+      {% if user.is_authenticated or user.is_post.author %}
+        <a href="{% url 'postEdit' pk=post.pk %}"title="Edit this Post?"><span class="fas fa-pen-square fa-2x"></span></a>
+        <a href="{% url 'postDelete' pk=post.pk %}"><span class="fas fa-dumpster-fire fa-2x" title="delete this post?" onclick="return confirm('Are you SURE you want to delete this Post?')"></span></a>
       {% endif %}
       <h1>{{ post.title }}</h1>
       <p>{{ post.text|markdown|safe|linebreaksbr }}</p>
   </div>
     <hr>
-    <a href="{%  url 'add_comment_to_post' pk=post.pk %}" class="btn btn-secondary"><strong>[+]comment</strong></a>
+    <a href="{%  url 'add_comment_to_post' pk=post.pk %}" class="btn btn-secondary" title="add comment"><strong>[+]comment</strong></a>
 {% for comment in post.comments.all %}
         {% if user.is_authenticated or comment.approved %}
             <div class="comment">
