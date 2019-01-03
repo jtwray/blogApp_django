@@ -25,19 +25,23 @@ SECRET_KEY = '2w^2yto+972vq&ipmw*a4f4*mj=v5wx!#nzf61*cvdfztlx_#@'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
+CRISPY_TEPMLATE_PACK = 'bootstrap*'
+
 ALLOWED_HOSTS = []
 
 LOGIN_REDIRECT_URL  = '/'
 # Application definition
 
 INSTALLED_APPS = [
+    'blog',
+    'crispy_forms',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'blog',
+    
 ]
 
 MIDDLEWARE = [

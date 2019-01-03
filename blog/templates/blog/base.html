@@ -38,7 +38,7 @@
 </div>
 </main>
   <footer>
-    {% if  user.is_authenticated %}
+    
         <ul>
             <li><a href="https://www.github.com/jtwray"><i class="fab fa-github" aria-hidden="true"></i></a></li>
             <li><a href="https://twitter.com/tuckerwray"><i class="fab fa-twitter" aria-hidden="true"></i></a></li>
@@ -49,16 +49,7 @@
             <li><a href="tel:12767343811"><i class="fa fa-phone" aria-hidden="true"></i></a></li>
             <li><a href="https://m.me/tucker.wray.1"><i class="fab fa-facebook-messenger" aria-hidden="true"></i></a></li>
         </ul>
-       
-          <a href="{% url 'postDraftlist' %}" class="top-menu" title="New Draft"> <span class="far fa-edit fa-2x" title="New Draft"></span></a>
-          <a href="{% url 'postNew' %}" class="top-menu" title="New Post"></a> <span class="fas fa-plus fa-2x" title="New Post"></span></a>
         
-        <p class="top-menu">Hello {{ user.username }} <small>(<a href="{% url 'logout' %}">Log Out</a>)</small></p>
-          {% else %}
-        <a href="{% url 'login' %}" class="top-menu"><i class="fas fa-sign-in-alt fa-2x"></i></a>
-          {% endif %}
-        <h1><a href="{% url 'postsList' %}">MyBlog</a></h1>
-      
   </footer>
 </body>
 </html>
