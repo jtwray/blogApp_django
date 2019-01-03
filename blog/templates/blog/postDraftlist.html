@@ -6,7 +6,7 @@
         <div class="post">
             <p class="date">created:  {{ post.created_date|date:'m-d-Y' }}</p>
             <h1><a href="{% url 'postsDetail' pk=post.pk %}"> {{ post.title }}></a></h1>
-             <p>{{ post.text | markdown | safe | linebreakbr }}</p>
+             <p>{{ post.text | markdown | safe | linebreaksbr }}</p>
         </div>
         <article class="media content-section">
             <div class="media-body">

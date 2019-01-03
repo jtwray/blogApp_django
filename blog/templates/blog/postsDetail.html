@@ -13,7 +13,7 @@
         <a href="{% url 'postEdit' pk=post.pk %}"><span class="fas fa-pen-square fa-2x"></span></a>
       {% endif %}
       <h1>{{ post.title }}</h1>
-      <p>{{ post.text | markdown |safe | linebreakbr }}</p>
+      <p>{{ post.text|markdown|safe|linebreaksbr }}</p>
   </div>
     <hr>
     <a href="{%  url 'add_comment_to_post' pk=post.pk %}" class="btn btn-secondary"><strong>[+]comment</strong></a>
@@ -29,7 +29,7 @@
                  {% endif %}
                 <strong>{{ comment.author }} </strong>
                 <p>said:</p>
-                <p>{{  comment.text | markdown | safe | linebreakbr }}</p>
+                <p>{{  comment.text | markdown | safe |linebreaksbr  }}</p>
             </div>
         {% endif %}
 {% empty %}
