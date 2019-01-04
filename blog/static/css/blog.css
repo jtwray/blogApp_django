@@ -89,12 +89,25 @@ body h1 a {
   color: #e9e7e749;
 }
 
+
+.comment {
+    text-align: center;
+    width: 320px;
+    background: hsla(231, 78%, 26%, 0.829);
+    margin: 20px 0px 20px 20px;
+  }
+
 .date {
-  color: darkmagenta
+    color: darkmagenta;
+    text-shadow: 2px 0px 6px #86131300, 5px 6px 5px #030303;
+    font-weight: bolder;
 }
 
 .post {
     margin-bottom: 70px;
+    margin: 20px 0px 20px 20px;
+    max-width: 78%;
+    
 }
 
 .post h1 a:active {
@@ -134,7 +147,7 @@ footer
 
 ul
 {
-position: relative;
+position: sticky;
 top: 95%;
 left:50%;
 transform: translate(-50%,-50%);
