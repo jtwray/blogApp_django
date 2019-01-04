@@ -7,6 +7,8 @@
         {{ form.as_p }}
         <button type="submit">Login</button>
     </form>
-    <p>Don't have an account?<a href="{% url 'signup' %}" title="downthe rabbithole" class="fab fa-studiovinari"  >FollowMe</a></p>
     <p><a href="{% url 'password_reset' %}">reset password</a></p>
+    <p class="fab fa-studiovinari">Don't have an account?</p><p class="fab fa-studiovinari" ></p>
+    <p><a href="{% url 'signup' %}" title="downthe rabbithole" class="fab fa-studiovinari"  >FollowMe</a ></p>
+
 {% endblock %}
